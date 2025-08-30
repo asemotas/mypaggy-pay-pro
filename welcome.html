@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spin to Win</title>
+  <style>
+    body {
+      background: #292210;
+      color: white;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      text-align: center;
+    }
+
+    .spin-container {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .spin-wheel {
+      width: 120px;
+      height: 120px;
+      background: url('spin.png') no-repeat center/cover;
+      border-radius: 50%;
+      transition: transform 5s ease-out;
+    }
+
+    .spinning {
+      transform: rotate(1440deg);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    img {
+      clip-path: circle();
+      margin-top: 50px;
+      width: 120px; /* Same as the spin wheel */
+      height: 120px; /* Same as the spin wheel */
+      object-fit: cover;
+    }
+
+    button {
+      width: 80%;
+      padding: 16px;
+      background: url(gold.jpeg);
+      color: black;
+      font-size: 16px;
+      border-radius: 15px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      border: 1px solid #7B642E;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="spin-container">
+    <h2>Tap to Spin</h2>
+    <div class="spin-wheel" id="spinWheel"></div>
+    <button id="spinButton">Spin Now</button>
+  </div>
+
+  <div id="congratsSection" class="hidden">
+    <img src="gift.png" alt="Gift">
+    <h2>Congratulations</h2>
+    <p>Sum of ₦120,870.05 has been sent to your <br>
+      PaggyPay account successfully <br> Go ahead and withdraw immediately</p>
+    <br>
+    <form action="next.html">
+      <button>Go to Dashboard</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("spinButton").addEventListener("click", function () {
+      let wheel = document.getElementById("spinWheel");
+      wheel.classList.add("spinning");
+
+      setTimeout(() => {
+        document.querySelector(".spin-container").classList.add("hidden");
+        document.getElementById("congratsSection").classList.remove("hidden");
+      }, 5000);
+    });
+  </script>
+</body>
+
+</html>
