@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sent</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: #222;
+      text-align: center;
+    }
+
+    .circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 5px solid #064e3b; /* dark green */
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: pop 0.6s ease forwards;
+      box-shadow: 0 0 10px rgba(6, 78, 59, 0.3); /* subtle glow */
+    }
+
+    .checkmark {
+      width: 19px;
+      height: 9px;
+      border-left: 6px solid #064e3b;
+      border-bottom: 6px solid #064e3b;
+      transform: rotate(-45deg);
+      opacity: 0;
+      animation: showCheck 0.5s ease 0.6s forwards;
+    }
+
+    @keyframes pop {
+      0% {
+        transform: scale(0.2);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes showCheck {
+      0% {
+        opacity: 0;
+        transform: rotate(-45deg) scale(0.5);
+      }
+      100% {
+        opacity: 1;
+        transform: rotate(-45deg) scale(1);
+      }
+    }
+
+    .message {
+      margin-top: 20px;
+      font-size: 16px;
+      max-width: 300px;
+      line-height: 1.4;
+      opacity: 0;
+      animation: fadeIn 0.8s ease 1.2s forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="circle">
+    <div class="checkmark"></div>
+  </div>
+  <div class="message">
+    Account has been activated and funds has been withdrawn successfully.<br>
+    Please check your account in 1 minute's time.
+  </div>
+</body>
+</html>

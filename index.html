@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paggy Pay - Login</title>
+</head>
+<style>
+  .con {
+    width: 70%;
+    border-radius: 20px;
+    border: 2px solid #B78727;
+    padding: 20px;
+  }
+  * {
+    margin: 0 auto;
+  }
+  body {
+    background: #292210;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  img {
+    width: 70px;
+    clip-path: circle();
+  }
+  .down {
+    width: 95%;
+    margin-top: 50%;
+    background: #F1F1F1;
+    height: 300px;
+    border-radius: 14px;
+    padding-top: 20px;
+  }
+  input {
+    padding: 16px;
+    font-size: 16px;
+    border: 1px solid #000;
+    margin-top: 15px;
+    width: 80%;
+    border-radius: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  button {
+    width: 80%;
+    padding: 16px;
+    background: #7B642E;
+    color: white;
+    font-size: 16px;
+    border-radius: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    cursor: pointer;
+  }
+  .signup {
+    background: none;
+    color: #7B642E;
+    border: none;
+    margin-top: 10px;
+  }
+</style>
+<body>
+  <div class="con">
+    <center>
+      <img src="piggy.png" alt="Piggy Logo">
+      <h1>Login To Your Paggy Pay</h1>
+    </center>
+  </div>
+
+  <div class="down">
+    <center>
+      <input type="email" id="loginEmail" placeholder="Enter Email" required>
+      <br>
+      <input type="password" id="loginPassword" placeholder="Enter Password" required>
+      <br><br>
+      <button onclick="login()">Login</button>
+      <br>
+      <button class="signup" onclick="location.href='signup.html'">Sign Up</button>
+    </center>
+  </div>
+
+  <script>
+    function login() {
+      let email = document.getElementById("loginEmail").value;
+      let password = document.getElementById("loginPassword").value;
+      let storedEmail = localStorage.getItem("email");
+      let storedPassword = localStorage.getItem("password");
+
+      if (email === storedEmail && password === storedPassword) {
+        alert("Login successful!");
+        window.location.href = "welcome.html";
+      } else {
+        alert("Invalid email or password.");
+      }
+    }
+  </script>
+</body>
+</html>

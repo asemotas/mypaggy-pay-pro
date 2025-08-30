@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<style>
+  .bal {
+    width: 93%;
+    background: url(dash.jpeg);
+    height: 150px;
+    border-radius: 10px;
+  }
+  body {
+    background: #292210;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+  }
+  * {
+    margin: 0 auto;
+  }
+  h3 {
+    color: #fff;
+    padding-top: 70px;
+  }
+  input {
+    padding: 16px;
+    font-size: 16px;
+    border: 1px solid #F1F1F1;
+    margin-top: 15px;
+    width: 80%;
+    border-radius: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #F1F1F1;
+    background: transparent;
+  }
+  button {
+    width: 80%;
+    padding: 16px;
+    background: #7B642E;
+    color: white;
+    font-size: 16px;
+    border-radius: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 1px solid #000;
+  }
+  img {
+    width: 30px;
+    clip-path: circle();
+    margin-left: 15px;
+  }
+</style>
+<body>
+   <br>
+  <img src="piggy.png" alt="piggy.png">
+  <br>
+  <br />
+<div class="bal">
+  <p style="float: left; padding-left: 15px; padding-top: 20px;">DashBoard Bal</p>
+  <p style="float: right; padding-right: 11px; padding-top: 20px;">Tier 1 <span style="color: greenyellow;">•</span></b>
+  <h2 style="padding-top: 55px; padding-left: 18px;"><span style="font-size: 18px;">₦<span id="number" style="font-size: 25px;">120,870.05</span></h2></h2>
+  </div>
+  <center>
+  <h3>Withdraw To Bank</h3>
+  <br>
+  <div class="form"> <br>
+    <form id="fundForm">
+      <div class="input-container">
+        <input type="number" id="palmpayNumber" name="palmpayNumber" required placeholder="Account Number">
+      </div>
+      <div class="input-container">
+        <input type="text" id="palmpayName" name="palmpayName" required placeholder="Account Name">
+      </div>
+      <div class="input-container">
+        <input type="number" id="amount" name="amount" required placeholder="Amount">
+        
+        <select name="bank" id="bank" style="padding: 16px;
+            font-size: 16px;
+            border: 1px solid #F1F1F1;
+            margin-top: 15px;
+            width: 89%;
+            border-radius: 15px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #F1F1F1;
+            background: transparent;">
+          <option value="bank" required>Select Bank</option>
+          <option>MOMO</option>
+          
+  <option value="access_bank">Access Bank</option>
+  <option value="citibank">Citibank Nigeria</option>
+  <option value="ecobank">Ecobank Nigeria</option>
+  <option value="fidelity_bank">Fidelity Bank</option>
+  <option value="first_bank">First Bank of Nigeria</option>
+  <option value="fcmb">First City Monument Bank (FCMB)</option>
+  <option value="globus_bank">Globus Bank</option>
+  <option value="guaranty_trust_bank">Guaranty Trust Bank (GTBank)</option>
+  <option value="heritage_bank">Heritage Bank</option>
+  <option value="keystone_bank">Keystone Bank</option>
+  <option value="optima_bank">Optima Bank</option>
+  <option value="parallex_bank">Parallex Bank</option>
+  <option value="polaris_bank">Polaris Bank</option>
+  <option value="providus_bank">Providus Bank</option>
+  <option value="signature_bank">Signature Bank</option>
+  <option value="stanbic_ibtc">Stanbic IBTC Bank</option>
+  <option value="standard_chartered">Standard Chartered Bank</option>
+  <option value="sterling_bank">Sterling Bank</option>
+  <option value="suntrust_bank">SunTrust Bank</option>
+  <option value="titan_trust_bank">Titan Trust Bank</option>
+  <option value="union_bank">Union Bank of Nigeria</option>
+  <option value="uba">United Bank for Africa (UBA)</option>
+  <option value="unity_bank">Unity Bank</option>
+  <option value="wema_bank">Wema Bank</option>
+  <option value="zenith_bank">Zenith Bank</option>
+
+  <!-- Microfinance & Digital Banks -->
+  <option value="ab_microfinance">AB Microfinance Bank</option>
+  <option value="kuda_bank">Kuda Microfinance Bank</option>
+  <option value="moniepoint_mfb">Moniepoint Microfinance Bank</option>
+  <option value="opay_mfb">Opay (Paycom) Microfinance Bank</option>
+  <option value="palmpay_mfb">Palmpay Microfinance Bank</option>
+  <option value="fairmoney_mfb">FairMoney Microfinance Bank</option>
+  <option value="carbon_mfb">Carbon (One Finance) Microfinance Bank</option>
+  <option value="sparkle_mfb">Sparkle Microfinance Bank</option>
+  <option value="mintyn_mfb">Mintyn Microfinance Bank</option>
+  <option value="eyowo_mfb">Eyowo Microfinance Bank</option>
+  <option value="rubies_mfb">Rubies Microfinance Bank</option>
+  <option value="vfd_mfb">VFD Microfinance Bank</option>
+  <option value="renmoney_mfb">Renmoney Microfinance Bank</option>
+  <option value="page_mfb">Page Microfinance Bank</option>
+  <option value="mkobo_mfb">Mkobo Microfinance Bank</option>
+  <option value="rephidim_mfb">Rephidim Microfinance Bank</option>
+  <option value="abuleado_mfb">Abuleado Microfinance Bank</option>
+        </select>
+        
+      </div>
+      <br>
+      <br>
+      <button type="submit">Fund</button>
+    </form>
+</div>
+</body>
+
+       
+  
+     </div> <br> <br> <br>
+</html>
+<script>
+       document.getElementById('fundForm').addEventListener('submit', function(event) {
+         event.preventDefault(); // Prevent form submission
+  
+         const palmpayNumber = document.getElementById('palmpayNumber').value;
+         const palmpayName = document.getElementById('palmpayName').value;
+         const amount = document.getElementById('amount').value;
+  
+         // Store form data in localStorage
+         localStorage.setItem('palmpayNumber', palmpayNumber);
+         localStorage.setItem('palmpayName', palmpayName);
+         localStorage.setItem('amount', amount);
+  
+         // Navigate to the next page
+         window.location.href = 'nextpage.html';
+       });
+</script>
